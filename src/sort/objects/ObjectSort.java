@@ -6,9 +6,16 @@ import java.util.Scanner;
 
 import sort.comparators.AgeComparator;
 import sort.comparators.BmiComparator;
+import sort.comparators.FacultyNumberComparator;
 import sort.comparators.HeightComparator;
+import sort.comparators.NameComparator;
 import sort.comparators.SexComparator;
+import sort.reader.PeopleReader;
 
+/**
+ * @author alex
+ * Упражнения - 28.10.2012г.
+ */
 public class ObjectSort {
 
 	/**
@@ -47,6 +54,12 @@ public class ObjectSort {
 			sortPersons(new BmiComparator());
 			break;
 		case 5:
+			sortPersons(new NameComparator());
+			break;
+		case 6:
+			sortPersons(new FacultyNumberComparator());
+			break;
+		case 7:
 			exit();
 			break;
 		default:
@@ -82,13 +95,8 @@ public class ObjectSort {
 	}
 
 	private static Person[] createPeople() {
-		Person[] people = new Person[5];
-		people[0] = new Person("Пешо", false, 21, 181, 78, "020931");
-		people[1] = new Person("Ваню", false, 28, 176, 80, "633533245");
-		people[2] = new Person("Картофа", false, 24, 168, 90, "092371");
-		people[3] = new Person("Маринка", true, 25, 168, 55, "1321543");
-		people[4] = new Person("Пипилота", true, 19, 166, 53, "00592371");
-		return people;
+		PeopleReader peopleReader = new PeopleReader("databaseLOL.txt");
+		return peopleReader.readPeople();
 	}
 
 	private static void printPersons(Person[] people) {
@@ -104,7 +112,9 @@ public class ObjectSort {
 		System.out.println("[2] Височина");
 		System.out.println("[3] Възраст");
 		System.out.println("[4] BMI");
-		System.out.println("[5] Изход");
+		System.out.println("[5] Име");
+		System.out.println("[6] Факултетен номер");
+		System.out.println("[7] Изход");
 		System.out.println("======================");
 		
 	}

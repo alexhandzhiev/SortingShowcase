@@ -4,6 +4,10 @@ import java.util.Comparator;
 
 import sort.objects.Person;
 
+/**
+ * @author alex
+ *
+ */
 public class AgeComparator implements Comparator<Person> {
 
 	/* (non-Javadoc)

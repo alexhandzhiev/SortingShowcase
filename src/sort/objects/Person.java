@@ -1,5 +1,8 @@
 package sort.objects;
 
+import java.math.BigInteger;
+import java.text.DecimalFormat;
+
 /**
  * @author alex
  * 
@@ -42,6 +45,8 @@ public class Person implements Comparable<Person> {
 	public double getBodyMassIndex() {
 		// ако разделим на double число (100.0) ще получим double резултат
 		// защото, ще имаме неявно castvane, иначе ще получим целочислено делене и няма да е правилно
+		DecimalFormat formatDouble = new DecimalFormat("#,##");
+//		return Double.valueOf(formatDouble.format(weight / Math.pow(height / 100.0, 2)));
 		return weight / Math.pow(height / 100.0, 2);
 	}
 

@@ -17,7 +17,7 @@ import javax.swing.table.TableModel;
 import sort.comparators.SexComparator;
 import sort.objects.Person;
 import sort.objects.PersonTableModel;
-import sort.reader.PersonReader;
+import sort.reader.PeopleReader;
 
 public class HelloWorldSwing {
 	public static void main(String[] args) throws IOException {
@@ -25,7 +25,7 @@ public class HelloWorldSwing {
 	}
 	
 	private static void createAndShowGUI() throws IOException {
-		PersonReader personReader = new PersonReader("databaseLOL.txt");
+		PeopleReader personReader = new PeopleReader("databaseLOL.txt");
 		final Person[] people = personReader.readPeople();
 		
 		final JFrame frame = new JFrame("Hello shit frame.");

@@ -10,6 +10,9 @@ import sort.objects.Person;
  */
 public class SexComparator implements Comparator<Person> {
 
+	/* (non-Javadoc)
+	 * @see java.util.Comparator#compare(java.lang.Object, java.lang.Object)
+	 */
 	@Override
 	public int compare(Person arg0, Person arg1) {
 		if(arg0.isFemale() == arg1.isFemale()) {

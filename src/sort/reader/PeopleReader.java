@@ -14,11 +14,11 @@ import sort.objects.Person;
  * @author alex
  *
  */
-public class PersonReader {
+public class PeopleReader {
 	
 	private String databaseName;
 	
-	public PersonReader(String databaseName) {
+	public PeopleReader(String databaseName) {
 		this.databaseName = databaseName;
 	}
 

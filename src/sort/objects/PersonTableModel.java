@@ -18,7 +18,7 @@ public class PersonTableModel extends AbstractTableModel {
 	
 	@Override
 	public int getColumnCount() {
-		return getClass().getDeclaredFields().length;
+		return Person.class.getDeclaredFields().length;
 	}
 	
 	@Override
@@ -39,7 +39,7 @@ public class PersonTableModel extends AbstractTableModel {
 		return null;
 	}
 
-	public String getColumName(int column) {
+	public String getColumnName(int column) {
 		switch(column) {
 			case 0: return "Име";
 			case 1: return "Пол";
