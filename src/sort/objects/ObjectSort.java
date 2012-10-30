@@ -8,7 +8,6 @@ import sort.comparators.AgeComparator;
 import sort.comparators.BmiComparator;
 import sort.comparators.HeightComparator;
 import sort.comparators.SexComparator;
-import sort.person.Person;
 
 public class ObjectSort {
 

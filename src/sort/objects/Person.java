@@ -1,4 +1,4 @@
-package sort.person;
+package sort.objects;
 
 /**
  * @author alex

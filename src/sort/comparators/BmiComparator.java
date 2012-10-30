@@ -2,7 +2,7 @@ package sort.comparators;
 
 import java.util.Comparator;
 
-import sort.person.Person;
+import sort.objects.Person;
 
 public class BmiComparator implements Comparator<Person> {
 
