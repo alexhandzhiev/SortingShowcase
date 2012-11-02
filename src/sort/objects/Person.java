@@ -1,6 +1,5 @@
 package sort.objects;
 
-import java.math.BigInteger;
 import java.text.DecimalFormat;
 
 /**
@@ -11,15 +10,15 @@ public class Person implements Comparable<Person> {
 	/**
 	 * години 0-120
 	 */
-	private int age;
+	private Integer age;
 	/**
 	 * височина в сантиметри
 	 */
-	private int height;
+	private Integer height;
 	/**
 	 * пол
 	 */
-	private boolean isFemale;
+	private Boolean isFemale;
 	/**
 	 * име
 	 */
@@ -27,13 +26,13 @@ public class Person implements Comparable<Person> {
 	/**
 	 * тегло
 	 */
-	private int weight;
+	private Integer weight;
 	/**
 	 * факултетен номер
 	 */
 	private String facultyNumber;
 
-	public Person(String name, boolean isFemale, int age, int height, int weight, String facultyNumber) {
+	public Person(String name, Boolean isFemale, Integer age, Integer height, Integer weight, String facultyNumber) {
 		this.name = name;
 		this.isFemale = isFemale;
 		this.age = age;
@@ -60,7 +59,7 @@ public class Person implements Comparable<Person> {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
@@ -68,7 +67,7 @@ public class Person implements Comparable<Person> {
 		return height;
 	}
 
-	public void setHeight(int height) {
+	public void setHeight(Integer height) {
 		this.height = height;
 	}
 
@@ -76,7 +75,7 @@ public class Person implements Comparable<Person> {
 		return isFemale;
 	}
 
-	public void setFemale(boolean isFemale) {
+	public void setFemale(Boolean isFemale) {
 		this.isFemale = isFemale;
 	}
 
@@ -92,7 +91,7 @@ public class Person implements Comparable<Person> {
 		return weight;
 	}
 
-	public void setWeight(int weight) {
+	public void setWeight(Integer weight) {
 		this.weight = weight;
 	}
 	

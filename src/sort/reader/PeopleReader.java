@@ -33,7 +33,6 @@ public class PeopleReader {
 			String currentLine;
 			
 			while ((currentLine = br.readLine()) != null) {
-				System.out.println(currentLine);
 				StringTokenizer st = new StringTokenizer(currentLine, ",");
 				Person person = new Person(
 						st.nextToken().trim(), 

@@ -1,6 +1,7 @@
 package sort.objects;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
@@ -60,6 +61,9 @@ public class ObjectSort {
 			sortPersons(new FacultyNumberComparator());
 			break;
 		case 7:
+			findByName();
+			break;
+		case 8:
 			exit();
 			break;
 		default:
@@ -93,6 +97,17 @@ public class ObjectSort {
 		System.out.println("----------------------");
 		printPersons(people);
 	}
+	
+	private static void findByName() {
+		System.out.println("Напишете търсеното име: ");
+		Scanner scan = new Scanner(System.in);
+		String input = scan.next().trim();
+		PeopleReader pplReader = new PeopleReader("databaseLOL.txt");
+		Person[] people = pplReader.readPeople();
+		Person personToSearch = new Person(input, null, null, null, null, null);
+		Person personFound = people[Collections.binarySearch(Arrays.asList(people), personToSearch, new NameComparator())];
+		personFound.print();
+	}
 
 	private static Person[] createPeople() {
 		PeopleReader peopleReader = new PeopleReader("databaseLOL.txt");
@@ -107,14 +122,15 @@ public class ObjectSort {
 
 	private static void createMenu() {
 		System.out.println("======================");
-		System.out.println("Критерий за сортиране: ");
+		System.out.println("Моля изберете стойност: ");
 		System.out.println("[1] Пол");
 		System.out.println("[2] Височина");
 		System.out.println("[3] Възраст");
 		System.out.println("[4] BMI");
 		System.out.println("[5] Име");
 		System.out.println("[6] Факултетен номер");
-		System.out.println("[7] Изход");
+		System.out.println("[7] Търсене по име");
+		System.out.println("[8] Изход");
 		System.out.println("======================");
 		
 	}
